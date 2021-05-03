@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1E5DB127-C0F1-43BD-82D1-47A957CCB6D1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ArellanoUniversityRFIDGateMonitoringSystem</RootNamespace>
+    <AssemblyName>ArellanoUniversityRFIDGateMonitoringSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=1.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.1.1.2\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.1.2\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.1.2\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Twilio, Version=5.59.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Twilio.5.59.0\lib\net451\Twilio.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connection.cs" />
+    <Compile Include="FormEntranceLate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEntranceLate.Designer.cs">
+      <DependentUpon>FormEntranceLate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEntranceScan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEntranceScan.Designer.cs">
+      <DependentUpon>FormEntranceScan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEntranceType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEntranceType.Designer.cs">
+      <DependentUpon>FormEntranceType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogs.Designer.cs">
+      <DependentUpon>FormLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOperatorAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOperatorAddEdit.Designer.cs">
+      <DependentUpon>FormOperatorAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRFID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRFID.Designer.cs">
+      <DependentUpon>FormRFID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRFIDAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRFIDAddEdit.Designer.cs">
+      <DependentUpon>FormRFIDAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRFIDCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRFIDCheck.Designer.cs">
+      <DependentUpon>FormRFIDCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSchedule.Designer.cs">
+      <DependentUpon>FormSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormScheduleAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormScheduleAddEdit.Designer.cs">
+      <DependentUpon>FormScheduleAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSMSBlaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSMSBlaster.Designer.cs">
+      <DependentUpon>FormSMSBlaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsers.Designer.cs">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUsersAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsersAddEdit.Designer.cs">
+      <DependentUpon>FormUsersAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageTRY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageTRY.Designer.cs">
+      <DependentUpon>MessageTRY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormOperator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOperator.Designer.cs">
+      <DependentUpon>FormOperator.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormEntranceLate.resx">
+      <DependentUpon>FormEntranceLate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEntranceScan.resx">
+      <DependentUpon>FormEntranceScan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEntranceType.resx">
+      <DependentUpon>FormEntranceType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogs.resx">
+      <DependentUpon>FormLogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOperatorAddEdit.resx">
+      <DependentUpon>FormOperatorAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRFID.resx">
+      <DependentUpon>FormRFID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRFIDAddEdit.resx">
+      <DependentUpon>FormRFIDAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRFIDCheck.resx">
+      <DependentUpon>FormRFIDCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSchedule.resx">
+      <DependentUpon>FormSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormScheduleAddEdit.resx">
+      <DependentUpon>FormScheduleAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSMSBlaster.resx">
+      <DependentUpon>FormSMSBlaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUsers.resx">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUsersAddEdit.resx">
+      <DependentUpon>FormUsersAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageTRY.resx">
+      <DependentUpon>MessageTRY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOperator.resx">
+      <DependentUpon>FormOperator.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Pictures\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
